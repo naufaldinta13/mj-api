@@ -1,0 +1,3 @@
+SET FOREIGN_KEY_CHECKS = 0;
+ALTER TABLE `workorder_shipment`
+ ADD `note` TINYTEXT NULL DEFAULT NULL;

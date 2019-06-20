@@ -1,0 +1,25 @@
+package: git.qasico.com/mj/api
+import:
+- package: git.qasico.com/cuxs/cuxs
+  version: ^v1.0.0
+- package: git.qasico.com/cuxs/env
+  version: ^v1.0.1
+- package: git.qasico.com/cuxs/mailer
+  version: ^v1.0.0
+- package: git.qasico.com/cuxs/orm
+  version: ^v1.0.2
+- package: git.qasico.com/cuxs/validation
+- package: git.qasico.com/cuxs/common
+  version: ^v1.0.0
+  subpackages:
+  - faker
+  - log
+- package: github.com/Sirupsen/logrus
+  version: v0.11.2
+- package: github.com/tealeg/xlsx
+  version: v1.0.3
+testImport:
+- package: github.com/stretchr/testify
+  version: v1.1.4
+  subpackages:
+  - assert

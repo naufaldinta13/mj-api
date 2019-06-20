@@ -1,0 +1,7 @@
+SET FOREIGN_KEY_CHECKS = 0;
+CREATE TABLE IF NOT EXISTS `application_setting` (
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `application_setting_name` VARCHAR(45) NOT NULL,
+  `value` TEXT NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;

@@ -1,0 +1,3 @@
+SET FOREIGN_KEY_CHECKS = 0;
+ALTER TABLE `recap_sales`
+ADD COLUMN `is_deleted` TINYINT(1) NULL DEFAULT 0 AFTER `created_at`;

@@ -1,0 +1,48 @@
+image: qasico/go:latest
+
+before_script:
+  - mysql -u root -p${MYSQL_ROOT_PASSWORD} -h ${TESTDB_MYSQL_HOST} -e 'SHOW VARIABLES LIKE "%version%";'
+  - go version
+  - ln -s /builds $GOPATH/src/git.qasico.com
+  - cd $GOPATH/src/git.qasico.com/mj/api
+  - glide install
+
+# Environment variables
+variables:
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_DATABASE: project_mj
+  TESTDB_USERNAME: root
+  TESTDB_PASSWORD: root
+  TESTDB_MYSQL_HOST: mysql
+  TESTDB_HOST: mysql:3306
+  TESTDB_NAME: project_mj
+  EMAIL_TEMPLATE_DIR: /go/src/git.qasico.com/mj/api/template
+
+# Stages sequences
+stages:
+  - test
+  - build
+
+# Test stages
+testing:
+  stage: test
+  services:
+  - mysql:5.7
+  script:
+  - migrate -database="mysql://root:${MYSQL_ROOT_PASSWORD}@tcp(${TESTDB_HOST})/${MYSQL_DATABASE}" -path="./migrations" up
+  - make test -s
+
+# Build stages
+compile:
+  stage: build
+  services:
+  - mysql:5.7
+  only:
+  - master
+  script:
+  - go build -race -ldflags "-extldflags '-static'" -o api
+  artifacts:
+    paths:
+    - api
+    - .env.example
+    expire_in: 1d

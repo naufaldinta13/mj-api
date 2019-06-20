@@ -1,0 +1,3 @@
+SET FOREIGN_KEY_CHECKS = 0;
+ALTER TABLE `invoice_receipt`
+ ADD `is_deleted` TINYINT(1) NULL DEFAULT 0;

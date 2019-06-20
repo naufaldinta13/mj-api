@@ -1,0 +1,8 @@
+SET FOREIGN_KEY_CHECKS = 0;
+CREATE TABLE IF NOT EXISTS `usergroup` (
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `usergroup_name` VARCHAR(45) NOT NULL,
+  `note` TINYTEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+COMMENT = 'List of usergroup in application';

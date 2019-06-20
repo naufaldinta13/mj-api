@@ -1,0 +1,1 @@
+INSERT INTO `application_privilege` (`id`,`application_module_id`,`usergroup_id`) VALUES (474,103,4);

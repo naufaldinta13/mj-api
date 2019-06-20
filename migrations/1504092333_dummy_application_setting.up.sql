@@ -1,0 +1,17 @@
+SET FOREIGN_KEY_CHECKS = 0;
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (1,'company_name','QASICO');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (2,'address','Green Lake City K-17');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (3,'application_logo','QSC');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (4,'code_sales_order','{"code_prefix":"S#O-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (5,'code_sales_order_wic','{"code_prefix":"S#OW-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (6,'code_sales_invoice','{"code_prefix":"S#I-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (7,'code_sales_return','{"code_prefix":"S#R-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (8,'code_purchase_order','{"code_prefix":"P#O-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (9,'code_purchase_invoice','{"code_prefix":"P#I-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (10,'code_purchase_return','{"code_prefix":"P#R-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (11,'code_receiving','{"code_prefix":"WO#R-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (12,'code_stockopname','{"code_prefix":"WO#SO-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (13,'code_fullfilment','{"code_prefix":"WO#F-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (14,'code_shipment','{"code_prefix":"WO#S-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (15,'code_invoice_receipt','{"code_prefix":"S#IN-%5d"}');
+INSERT INTO `application_setting` (`id`,`application_setting_name`,`value`) VALUES (16,'code_customer_report','{"code_prefix":"LC-%5d"}');

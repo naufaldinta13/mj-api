@@ -1,0 +1,3 @@
+SET FOREIGN_KEY_CHECKS = 0;
+ALTER TABLE `sales_order`
+ADD COLUMN `is_reported` TINYINT(1) NULL DEFAULT '0' AFTER `is_deleted`;
